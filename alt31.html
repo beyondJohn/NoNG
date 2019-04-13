@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles4.css">
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="./js/httpService.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+        crossorigin="anonymous">
+    <title>JHASiM</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:#163587!important">
+        <!-- <a class="navbar-brand" href="#" style="color:#fff; text-shadow: 1px 1px rgb(175, 157, 157);">JHASiM</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="menu-items" class="navbar-nav mr-auto">
+                <!-- <li class="nav-item active">
+                    Home<span class="sr-only">(current)</span>
+                </li>
+                <li class="nav-item">
+                    CME Activities
+                </li>
+                <li class="nav-item">
+                    About Us
+                </li>
+                <li class="nav-item">
+                    General Info
+                </li>
+                <li class="nav-item">
+                    My Account
+                </li>
+                <li class="nav-item">
+                    Support
+                </li> -->
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <table>
+                    <tr>
+                        <td class="login">Login &nbsp;&nbsp;&nbsp;</td>
+                        <td id="searchInputTD"><input type="buttton" id="myBtn" class="btnHide txtbox" /></td>
+                        <td class="searchTableCells" onclick="clicked()">
+                            <!-- style="width:20px;border:solid 1px white;" -->
+                            <i class="fa fa-search" aria-hidden="true" style="color:#efeeee;"></i>
+                        </td>
+                    </tr>
+                </table>
+                <!-- <input class="form-control mr-sm-2" type="search" placeholder="enter search word..." aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+            </form>
+        </div>
+    </nav>
+    <div class="row" style="height: 200px;">
+        
+<img src="images/Rev_logo_364x400.jpg" class="logotop" style="height: 100%;" />
+        
+        <div class="col-md-10 show-carousel" >
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade full-carousel" data-ride="carousel" >
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner" style="position: relative; height: 100%;">
+                    <div class="carousel-item active" style="height: 100%;">
+
+                        <div style="position: absolute;width:100%;z-index: 0;height: 100%;">
+                                <div class="celebratingText">Celebrating
+                                        19
+                                        Years of Excellence in Certified CME</div>
+                            <img src="./images/versions/sliders/slide1/slide1_1250x200.jpg" style="width:100%;height: 100%;">
+                        </div>
+
+
+                    </div>
+                    <div class="carousel-item" style="height:100%;">
+
+                        <div style="position: absolute;width:100%;z-index: 0;height: 100%;">
+                                <div class="celebratingText">Celebrating
+                                        19
+                                        Years of Excellence in Certified CME</div>
+                            <img src="./images/versions/sliders/slide2/slide2_1250x200.jpg" style="width:100%;height: 100%;">
+                        </div>
+
+
+                    </div>
+                    <div class="carousel-item" style="height:100%;">
+
+                        <div style="position: absolute;width:100%;z-index: 0;height: 100%;">
+                                <div class="celebratingText">Celebrating
+                                        19
+                                        Years of Excellence in Certified CME</div>
+                            <img src="./images/versions/sliders/slide3/slide3_1250x200.jpg" style="width:100%;height: 100%;">
+                        </div>
+
+
+                    </div>
+                    <div class="carousel-item" style="height:100%;">
+
+                        <div style="position: absolute;width:100%;z-index: 0;height: 100%;">
+                                <div class="celebratingText">Celebrating
+                                        19
+                                        Years of Excellence in Certified CME</div>
+                            <img src="./images/versions/sliders/slide4/slide4_1250x200.jpg" style="width:100%;height: 100%;">
+                        </div>
+
+
+                    </div>
+                    <div class="carousel-item" style="height:100%;">
+
+                        <div style="position: absolute;width:100%;z-index: 0;height: 100%;">
+                            <div class="celebratingText">Celebrating
+                                19
+                                Years of Excellence in Certified CME</div>
+                            <img src="./images/versions/sliders/slide5/slide5_1250x200.jpg" style="width:100%;height: 100%;">
+                        </div>
+
+
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- <div style="position: relative;width:100%;overflow:hidden;right:0px;height: 100%;">
+                    <div style="position: absolute;width:100%;z-index: 0;height: 100%;">
+                        <img src="/images/versions/sliders/slide1/slide1_1250x250.jpg" style="width:100%;height: 100%;">
+                    </div>
+                </div> -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 row-title" style="padding-left: 15px;">
+
+            <div style="margin-left: 15px;">
+                <div class="section-title">
+                    L<span class="section-title-lower">IVE </span>CME
+                    E<span class="section-title-lower">VENTS</span>
+                </div>
+                <div style="overflow: hidden;">
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <div class="row module-container ripple">
+                                <div class="col-sm-3" style="text-align: center; padding-right: 0px !important; padding-bottom: 15px; padding-top: 3%;">
+                                    <img class="module-img" src="images/xrayIcon.JPG">
+                                </div>
+                                <div class="col-sm-9 div-module-text" style="text-align: left;">
+                                    <div>
+                                        <br />
+                                        <div class="module">The 13th Annual Johns Hopkins
+                                            Multiple Sclerosis Series
+                                        </div>
+                                    </div>
+                                    <div class="module-secondary-upcoming">
+                                        Miami, FL <span style="cursor: pointer; color:blue;">more...</span>
+                                        <!-- <br />Houston, TX - Saturday, December 8, 2018 -->
+                                        <div class="credits">CME/CNE Credits: 0.5</div>
+                                    </div>
+
+                                </div>
+                                <div class="divHR">
+                                    <hr class="_hr">
+                                </div>
+                            </div>
+                            <!-- start -->
+                            <div class="row module-container">
+                                <div class="col-sm-3" style="text-align: center; padding-right: 0px; padding-bottom: 15px; padding-top: 3%;">
+                                    <img class="module-img" src="images/xrayIcon.JPG">
+                                </div>
+                                <div class="col-sm-9 div-module-text" style="text-align: left;">
+                                    <div>
+                                        <br />
+                                        <div class="module">The 13th Annual Johns Hopkins
+                                            Multiple Sclerosis Series
+                                        </div>
+                                    </div>
+                                    <div class="module-secondary-upcoming">
+                                        Miami, FL <span style="cursor: pointer; color:blue;">more...</span>
+                                        <!-- <br />Houston, TX - Saturday, December 8, 2018 -->
+                                        <div class="credits">CME/CNE Credits: 0.5</div>
+                                    </div>
+                                </div>
+                                <div class="divHR">
+                                    <hr class="_hr">
+                                </div>
+                            </div>
+                            <!-- finish -->
+                        </div>
+                        <!-- <div class="col-md-1 divider-main"></div> -->
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-4 row-title" style="padding-left: 25px;">
+            <!-- <div style="color: rgb(216, 213, 9); font-size: 22px; padding: 3px; text-shadow: 1px 1px rgb(221, 140, 19); border-top-left-radius: 15px;border-top-right-radius: 15px;">RECENT -->
+            <div class="section-title">
+                CME E<span class="section-title-lower">NDURING </span>M<span class="section-title-lower">ATERIALS</span></div>
+                <!-- start -->
+                <div class="row module-container">
+                    <div class="col-sm-3" style="text-align: center; padding-right: 0px; padding-bottom: 15px; padding-top: 3%;">
+                        <img class="module-img" src="images/symptoms.JPG">
+                    </div>
+                    <div class="col-sm-9 div-module-text" style="text-align: left;">
+                        <div>
+                            <br />
+                            <div class="module">Symptoms and Underlying Pathology
+                                Diagnosis and Optimal
+                                Management <span style="cursor: pointer; color:blue;">more...</span>
+                            </div>
+                        </div>
+                        <div class="module-secondary-upcoming">
+                            Interactive Activity
+                        <div class="credits">CME/CNE Credits: 0.5</div>
+                        </div>
+                    </div>
+                    <div class="divHR">
+                        <hr class="_hr">
+                    </div>
+                </div>
+                <!-- finish -->
+                <!-- start -->
+                <div class="row module-container">
+                    <div class="col-sm-3" style="text-align: center; padding-right: 0px; padding-bottom: 15px; padding-top: 3%;">
+                        <img class="module-img" src="images/diagnosis.JPG">
+                    </div>
+                    <div class="col-sm-9 div-module-text" style="text-align: left;">
+                        <div>
+                            <br />
+                            <div class="module">The 10th Annual Johns Hopkins
+                                Dystonia & Spasticity Practicum <span style="cursor: pointer; color:blue;">more...</span>
+                            </div>
+                        </div>
+                        <div class="module-secondary-upcoming">
+                            Interactive Activity
+                            <div class="credits">CME/CNE Credits: 0.5</div>
+                        </div>
+                    </div>
+                    <div class="divHR">
+                        <hr class="_hr">
+                    </div>
+                </div>
+                <!-- finish -->
+        </div>
+        <div class="col-lg-4 row-title row-activities">
+            <div style="min-width:240px; width: 75%; margin:auto;">
+                <div class="section-title">CME
+                    A<span class="section-title-lower">CTIVITIES BY </span>T<span class="section-title-lower">OPIC</span></div>
+                <ul style="list-style: none; padding-left: 0; text-align: center;" id="listActivities">
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=59&pageName=Zone-Addiction Medicine">
+                            Addiction Medicine</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=28&pageName=Zone-Adolescent Medicine/Pediatrics">
+                            Adolescent Medicine</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=9&pageName=Zone-Cardiology">
+                            Cardiology</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=20&pageName=Zone-Critical Care/Emergency Medicine">
+                            Critical Care</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=19&pageName=Zone-Dermatology">
+                            Dermatology</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=21&pageName=Zone-Endocrinology/Diabetes">
+                            Endocrinology/Diabetes</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=22&pageName=Zone-Gastroenterology">
+                            Gastroenterology</a></li>
+
+                    <li>
+
+                        <a href="http://www.jhcme.com">
+
+                            <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=76&pageName=Zone-Hospitalists">
+                                Hospitalists</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=8&pageName=Zone-Infectious Diseases">
+                            Infectious Diseases</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=23&pageName=Zone-Interventional Cardiology/Electrophysiology">
+                            Interventional Cardiology</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=85&pageName=Zone-Lung Cancer">
+                            Lung
+                            Cancer</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=24&pageName=Zone-Managed Care">
+                            Managed
+                            Care</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=74&pageName=Zone-Musculoskeletal">
+                            Musculoskeletal</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=25&pageName=Zone-Nephrology">
+                            Nephrology</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=17&pageName=Zone-Neurology">
+                            Neurology</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=26&pageName=Zone-Oncology/Hematology">
+                            Oncology/Hematology</a></li>
+
+                    <li>
+
+                        <a href="http://jhasio.com/http://www.jhasim.com/template.cfm?TEMPLATE=include_viewprograms.cfm">
+
+                            <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=14&pageName=Zone-Ophthalmology">
+                                Ophthalmology</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=27&pageName=Zone-Pain Management">
+                            Pain
+                            Management</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=29&pageName=Zone-Psychiatry">
+                            Psychiatry</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=1&pageName=Zone-Pulmonary Medicine">
+                            Pulmonary Medicine</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=60&pageName=Zone-Rheumatology">
+                            Rheumatology</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=30&pageName=Zone-Surgery/Transplantation">
+                            Surgery/Transplantation</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=31&pageName=Zone-Urology">
+                            Urology</a></li>
+
+                    <li>
+
+                        </a>
+
+                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=13&pageName=Zone-Women's Health">
+                            Women's Health</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+    <div class="container-fluid" style="margin:15px 0; background-color:#d3d7e2; padding: 25px; border-top: solid 1px rgb(172, 170, 170);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" style="color:#333132; text-align: center;">
+                    About<br /><br />
+                    <div id="footer-about">
+                        <ul class="footer-ul" style="list-style:none; text-align: left; margin: 0 25%;">
+                            <li>About JHASiM</li>
+                            <li>Privacy Policy</li>
+                            <li>Cookies</li>
+                            <li>Terms of Use</li>
+                            <li>Advertising Policy</li>
+                            <li>Help</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-md-6 footer-subscription" style="color:#333132; text-align: center;">
+                    Subscription<br /><br />
+                    <ul class="footer-ul" style="list-style:none; text-align: left; margin: 0 25%;">
+                        <li>Subscribe for Free</li>
+                        <li>Notifications</li>
+                        <li>Manage Subscription</li>
+                        <li>Login</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div style="background-color: #163587; margin-top: -15px; ">
+        <div class="col-md-12 " style="color:#333132; text-align: center; color:white; padding: 25px 15px; font-size:12px;">
+            <div id="year"></div>
+        </div>
+    </div>
+    <script>
+        function setSearch() {
+            document.getElementById('myBtn').style.width = '150px';
+            // document.getElementById('myBtn').style.border = 'solid black 1px';
+            document.getElementById('myBtn').style.paddingLeft = '5px';
+            document.getElementById('searchInputTD').classList.add('searchTableCells');
+        }
+        setSearch();
+        var on = true;
+        document.getElementById('myBtn').addEventListener("transitionend", function (event) {
+            if (on == false) {
+                document.getElementById('myBtn').style.border = 'none';
+                document.getElementById('searchInputTD').classList.remove('searchTableCells');
+                document.getElementById('myBtn').style.paddingLeft = '0px';
+                document.getElementById('myBtn').value = '';
+                document.getElementById('searchInputTD').style.backgroundColor = '#163587';
+            }
+
+        }, false);
+        function clicked() {
+            if (!on) {
+                document.getElementById('myBtn').style.width = '150px';
+                // document.getElementById('myBtn').style.border = 'solid black 1px';
+                document.getElementById('myBtn').style.paddingLeft = '5px';
+                document.getElementById('searchInputTD').classList.add('searchTableCells');
+                document.getElementById('searchInputTD').style.backgroundColor = '#fff';
+                on = !on;
+            }
+            else {
+                if (document.getElementById('myBtn').value != '') {
+                    alert('searching for ' + document.getElementById('myBtn').value);
+                }
+                else {
+                    document.getElementById('myBtn').style.width = '0px';
+                    document.getElementById('myBtn').style.padding = '0px';
+                    on = !on;
+                }
+            }
+        }
+    </script>
+    <script type="text/javascript" charset="utf-8">
+        $(function () {
+            var date = new Date();
+            document.getElementById('year').innerHTML = 'Johns Hopkins Advanced Studies in Medicine (ISSN-1558-0334), is published by ASiM CE, LLC, d/b/a ASiM, PO Box 340, Somerville, NJ 08876. (908) 253-9001. Copyright © '
+                + date.getFullYear()
+                + ' by ASiM CE, LLC. All rights reserved. No part of this publication may be reproduced or transmitted in any form or by any means, electronic or mechanical, without first obtaining permission from the publisher. ASiM is a registered trademark of ASiM CE LLC.';
+        });
+    </script>
+    <script src="./js/menu-links.js"></script>
+    <script src="./js/functions.js"></script>
+    
+</body>
+
+</html>
