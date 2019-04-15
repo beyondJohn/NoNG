@@ -8,11 +8,15 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles4.css">
+    <link rel="stylesheet" href="css/modal.css">
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/config.js"></script>
     <script src="./js/httpService.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/mask.js"></script>
+
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
@@ -143,7 +147,7 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-4 row-title" style="padding-left: 15px;">
+        <div class="col-lg-4 row-title" style="padding-left: 15px;" id="cmeLiveEvents" onclick="openLiveItems('live')">
 
             <div style="margin-left: 15px;">
                 <div class="section-title">
@@ -152,52 +156,8 @@
                 </div>
                 <div style="overflow: hidden;">
                     <div class="row ">
-                        <div class="col-md-12">
-                            <div class="row module-container ripple">
-                                <div class="col-sm-3" style="text-align: center; padding-right: 0px !important; padding-bottom: 15px; padding-top: 3%;">
-                                    <img class="module-img" src="images/xrayIcon.JPG">
-                                </div>
-                                <div class="col-sm-9 div-module-text" style="text-align: left;">
-                                    <div>
-                                        <br />
-                                        <div class="module">The 13th Annual Johns Hopkins
-                                            Multiple Sclerosis Series
-                                        </div>
-                                    </div>
-                                    <div class="module-secondary-upcoming">
-                                        Miami, FL <span style="cursor: pointer; color:blue;">more...</span>
-                                        <!-- <br />Houston, TX - Saturday, December 8, 2018 -->
-                                        <div class="credits">CME/CNE Credits: 0.5</div>
-                                    </div>
+                        <div class="col-md-12" id="cmeLiveEventsContent" >
 
-                                </div>
-                                <div class="divHR">
-                                    <hr class="_hr">
-                                </div>
-                            </div>
-                            <!-- start -->
-                            <div class="row module-container">
-                                <div class="col-sm-3" style="text-align: center; padding-right: 0px; padding-bottom: 15px; padding-top: 3%;">
-                                    <img class="module-img" src="images/xrayIcon.JPG">
-                                </div>
-                                <div class="col-sm-9 div-module-text" style="text-align: left;">
-                                    <div>
-                                        <br />
-                                        <div class="module">The 13th Annual Johns Hopkins
-                                            Multiple Sclerosis Series
-                                        </div>
-                                    </div>
-                                    <div class="module-secondary-upcoming">
-                                        Miami, FL <span style="cursor: pointer; color:blue;">more...</span>
-                                        <!-- <br />Houston, TX - Saturday, December 8, 2018 -->
-                                        <div class="credits">CME/CNE Credits: 0.5</div>
-                                    </div>
-                                </div>
-                                <div class="divHR">
-                                    <hr class="_hr">
-                                </div>
-                            </div>
-                            <!-- finish -->
                         </div>
                         <!-- <div class="col-md-1 divider-main"></div> -->
                     </div>
@@ -207,232 +167,34 @@
             </div>
 
         </div>
-        <div class="col-lg-4 row-title" style="padding-left: 25px;">
+        <div class="col-lg-4 row-title" style="padding-left: 25px;" id="cmeEnduring" onclick="openEnduringItems('enduring')">
             <!-- <div style="color: rgb(216, 213, 9); font-size: 22px; padding: 3px; text-shadow: 1px 1px rgb(221, 140, 19); border-top-left-radius: 15px;border-top-right-radius: 15px;">RECENT -->
             <div class="section-title">
-                CME E<span class="section-title-lower">NDURING </span>M<span class="section-title-lower">ATERIALS</span></div>
-            <!-- start -->
-            <div class="row module-container">
-                <div class="col-sm-3" style="text-align: center; padding-right: 0px; padding-bottom: 15px; padding-top: 3%;">
-                    <img class="module-img" src="images/symptoms.JPG">
-                </div>
-                <div class="col-sm-9 div-module-text" style="text-align: left;">
-                    <div>
-                        <br />
-                        <div class="module">Symptoms and Underlying Pathology
-                            Diagnosis and Optimal
-                            Management <span style="cursor: pointer; color:blue;">more...</span>
-                        </div>
-                    </div>
-                    <div class="module-secondary-upcoming">
-                        Interactive Activity
-                        <div class="credits">CME/CNE Credits: 0.5</div>
-                    </div>
-                </div>
-                <div class="divHR">
-                    <hr class="_hr">
-                </div>
+                CME E<span class="section-title-lower">NDURING </span>M<span class="section-title-lower">ATERIALS</span>
             </div>
-            <!-- finish -->
-            <!-- start -->
-            <div class="row module-container">
-                <div class="col-sm-3" style="text-align: center; padding-right: 0px; padding-bottom: 15px; padding-top: 3%;">
-                    <img class="module-img" src="images/diagnosis.JPG">
-                </div>
-                <div class="col-sm-9 div-module-text" style="text-align: left;">
-                    <div>
-                        <br />
-                        <div class="module">The 10th Annual Johns Hopkins
-                            Dystonia & Spasticity Practicum <span style="cursor: pointer; color:blue;">more...</span>
-                        </div>
+            <div style="overflow: hidden;">
+                <div class="row ">
+                    <div class="col-md-12" id="cmeEnduringContent" >
+
                     </div>
-                    <div class="module-secondary-upcoming">
-                        Interactive Activity
-                        <div class="credits">CME/CNE Credits: 0.5</div>
-                    </div>
+                    <!-- <div class="col-md-1 divider-main"></div> -->
                 </div>
-                <div class="divHR">
-                    <hr class="_hr">
-                </div>
+
+
             </div>
-            <!-- finish -->
         </div>
-        <div class="col-lg-4 row-title row-activities">
+        <div class="col-lg-4 row-title row-activities" id="cmeActivitiesByTopic" onclick="openActivitiesItems('activities')">
             <div style="min-width:240px; width: 75%; margin:auto;">
                 <div class="section-title">CME
                     A<span class="section-title-lower">CTIVITIES BY </span>T<span class="section-title-lower">OPIC</span></div>
-                <ul style="list-style: none; padding-left: 0; text-align: center;" id="listActivities">
+                <ul style="list-style: none; padding-left: 0; text-align: center;" id="listActivities" >
 
                     <li>
-
-                        </a>
 
                         <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=59&pageName=Zone-Addiction Medicine">
                             Addiction Medicine</a></li>
 
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=28&pageName=Zone-Adolescent Medicine/Pediatrics">
-                            Adolescent Medicine</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=9&pageName=Zone-Cardiology">
-                            Cardiology</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=20&pageName=Zone-Critical Care/Emergency Medicine">
-                            Critical Care</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=19&pageName=Zone-Dermatology">
-                            Dermatology</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=21&pageName=Zone-Endocrinology/Diabetes">
-                            Endocrinology/Diabetes</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=22&pageName=Zone-Gastroenterology">
-                            Gastroenterology</a></li>
-
-                    <li>
-
-                        <a href="http://www.jhcme.com">
-
-                            <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=76&pageName=Zone-Hospitalists">
-                                Hospitalists</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=8&pageName=Zone-Infectious Diseases">
-                            Infectious Diseases</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=23&pageName=Zone-Interventional Cardiology/Electrophysiology">
-                            Interventional Cardiology</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=85&pageName=Zone-Lung Cancer">
-                            Lung
-                            Cancer</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=24&pageName=Zone-Managed Care">
-                            Managed
-                            Care</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=74&pageName=Zone-Musculoskeletal">
-                            Musculoskeletal</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=25&pageName=Zone-Nephrology">
-                            Nephrology</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=17&pageName=Zone-Neurology">
-                            Neurology</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=26&pageName=Zone-Oncology/Hematology">
-                            Oncology/Hematology</a></li>
-
-                    <li>
-
-                        <a href="http://jhasio.com/http://www.jhasim.com/template.cfm?TEMPLATE=include_viewprograms.cfm">
-
-                            <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=14&pageName=Zone-Ophthalmology">
-                                Ophthalmology</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=27&pageName=Zone-Pain Management">
-                            Pain
-                            Management</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=29&pageName=Zone-Psychiatry">
-                            Psychiatry</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=1&pageName=Zone-Pulmonary Medicine">
-                            Pulmonary Medicine</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=60&pageName=Zone-Rheumatology">
-                            Rheumatology</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=30&pageName=Zone-Surgery/Transplantation">
-                            Surgery/Transplantation</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=31&pageName=Zone-Urology">
-                            Urology</a></li>
-
-                    <li>
-
-                        </a>
-
-                        <a href="http://www.jhasim.com/template.cfm?TEMPLATE=include_viewzone.cfm&ID=13&pageName=Zone-Women's Health">
-                            Women's Health</a></li>
+                    <!-- insert dynamic content here -->
 
                 </ul>
 
@@ -446,10 +208,10 @@
     <div class="container-fluid" style="margin:15px 0; background-color:#d3d7e2; padding: 25px; border-top: solid 1px rgb(172, 170, 170);">
         <div class="container">
             <div class="row">
-                <div class="col-md-6" style="color:#333132; text-align: center;">
+                <div class="col-md-6" style="color:#333132; text-align: center;" >
                     About<br /><br />
                     <div id="footer-about">
-                        <ul class="footer-ul" style="list-style:none; text-align: left; margin: 0 25%;">
+                        <ul class="footer-ul" style="list-style:none; text-align: left; margin: 0 25%;" id="aboutLinks" onclick="openAboutItems('about')">
                             <li>About JHASiM</li>
                             <li>Privacy Policy</li>
                             <li>Cookies</li>
@@ -460,9 +222,9 @@
                     </div>
 
                 </div>
-                <div class="col-md-6 footer-subscription" style="color:#333132; text-align: center;">
+                <div class="col-md-6 footer-subscription" style="color:#333132; text-align: center;" >
                     Subscription<br /><br />
-                    <ul class="footer-ul" style="list-style:none; text-align: left; margin: 0 25%;">
+                    <ul class="footer-ul" style="list-style:none; text-align: left; margin: 0 25%;" id="subscriptionLinks" onclick="openSubscriptionItems('subscription')">
                         <li>Subscribe for Free</li>
                         <li>Notifications</li>
                         <li>Manage Subscription</li>
@@ -529,6 +291,15 @@
     </script>
     <script src="./js/menu-links.js"></script>
     <script src="./js/functions.js"></script>
+    <script src="./js/saveMenuItems.js"></script>
+    <script src="js/activitiesLinks.js"></script>
+    <script src="js/createActivitiesLink.js"></script>
+    <script src="js/aboutLinks.js"></script>
+    <script src="js/subscriptionLinks.js"></script>
+    <script src="js/liveEvents.js"></script>
+    <script src="js/enduring.js"></script>
+    <script src="js/createLiveModule.js"></script>
+    <script src="js/new.js"></script>
 
 </body>
 

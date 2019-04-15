@@ -1,9 +1,32 @@
+.cancel{
+    background-color: #ff4081;
+}
+#aboutLinks:hover{
+    cursor: pointer;
+    background-color: #eb17bd
+}
+#subscriptionLinks:hover{
+    cursor: pointer;
+    background-color: #eb17bd
+}
+#cmeLiveEvents:hover{
+    cursor: pointer;
+    background-color: #eb17bd
+}
+#cmeEnduring:hover{
+    cursor: pointer;
+    background-color: #eb17bd
+}
+#cmeActivitiesByTopic:hover{
+    cursor: pointer;
+    background-color: #eb17bd
+}
 .select-menu{
     cursor: pointer;
 }
 .select-menu:hover{
     cursor: pointer;
-    background-color: #6c757d
+    background-color: #eb17bd
 }
 .show-carousel{
     padding-right:0px !important; position:relative; padding-left:0px !important;
@@ -225,7 +248,7 @@ body {
 
 .module-secondary-upcoming {
     color: #7a7c7c;
-    padding: 20px 0 0 20px;
+    padding: 20px 0 0 10px;
     ;
     padding-top: 0px;
     font-weight: bold;
