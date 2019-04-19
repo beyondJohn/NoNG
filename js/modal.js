@@ -1,5 +1,26 @@
 var isInit = true;
 function createLinkObj(index) {
+
+    var deleteClick = function (src) {
+        var area = localStorage.getItem('selected');
+
+        // strip text from button id to get index value
+        var id = src.target.id.replace("deleteBtn", "");
+        tempActivitiesArray = [];
+        
+        if (area == 'menuItems') {
+            for (var i = 0; i < db['jhasim']['header']['headerlinks'].length; i++) {
+                if (i != id) {
+                    tempActivitiesArray.push(db['jhasim']['header']['headerlinks'][i]);
+                }
+            }
+            db['jhasim']['header']['headerlinks'] = tempActivitiesArray;
+            localStorage.setItem('tempDb', JSON.stringify(db));
+            db = JSON.parse(localStorage.getItem('tempDb'));
+            maskClick();
+            openMenuItems();
+        }
+    }
     // Form Container
     var formContainer = document.createElement('DIV');
     formContainer.id = "formContainer" + index;
@@ -55,6 +76,19 @@ function createLinkObj(index) {
     trHREF.appendChild(tdHREFText);
     trHREF.appendChild(tdHREFURI);
 
+    // Delete button
+    var tdDelete = document.createElement('TD');
+    var deleteBtn = document.createElement('BUTTON');
+    deleteBtn.setAttribute('type', 'button');
+    deleteBtn.innerHTML = 'remove';
+    deleteBtn.id = "deleteBtn" + index;
+    tdDelete.setAttribute('colspan', '2');
+    tdDelete.style.textAlign = 'right';
+    tdDelete.addEventListener('click', deleteClick);
+    tdDelete.appendChild(deleteBtn);
+    var trDelete = document.createElement('TR');
+    trDelete.appendChild(tdDelete);
+
     var trHR = document.createElement('TR');
     var tdHR = document.createElement('TD');
     tdHR.setAttribute('colspan', '2');
@@ -64,6 +98,7 @@ function createLinkObj(index) {
 
     table.appendChild(tr);
     table.appendChild(trHREF);
+    table.appendChild(trDelete);
     table.appendChild(trHR);
     // formContainer.appendChild(labelTitle);
     // formContainer.appendChild(textTitle);
@@ -200,13 +235,13 @@ var enableModal = function () {
 
     document.body.appendChild(divModalContainer);
 
-    if(document.getElementById('scrollContainer') == null){
+    if (document.getElementById('scrollContainer') == null) {
         var scrollContainer = document.createElement('DIV');
         scrollContainer.id = 'scrollContainer';
         scrollContainer.setAttribute('style', 'overflow-y:scroll; overflow-x:hidden; position:relative;height:100%;');
         document.getElementById('divModal').appendChild(scrollContainer);
     }
-    
+
 };
 
 // function addFooter() {

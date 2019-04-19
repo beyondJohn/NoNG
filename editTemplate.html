@@ -16,6 +16,7 @@
     <script src="./js/httpService.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/mask.js"></script>
+    <script src="js/sendUpdate.js"></script>
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -32,6 +33,9 @@
 </head>
 
 <body>
+    <div style="position:absolute; z-index:5; top:0px; left:0px;">
+        <button type="button" onclick="soap()">Save</button>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:#163587!important">
         <!-- <a class="navbar-brand" href="#" style="color:#fff; text-shadow: 1px 1px rgb(175, 157, 157);">JHASiM</a> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -39,8 +43,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul id="menu-items" class="navbar-nav mr-auto select-menu" onclick="openMenuItems()">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" onclick="openMenuItems()">
+            <ul id="menu-items" class="navbar-nav mr-auto select-menu" >
                 <!-- insert dynamic content here -->
             </ul>
             <form class="form-inline my-2 my-lg-0">

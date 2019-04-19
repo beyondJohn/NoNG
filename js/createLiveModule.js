@@ -1,4 +1,36 @@
 var createModule = function (index) {
+
+    var deleteClick = function (src) {
+        var area = localStorage.getItem('selected');
+        // strip text from button id to get index value
+        var id = src.target.id.replace("deleteBtn", "");
+        tempEventArray = [];
+        if(area == 'live'){
+            for (var i = 0; i < db['jhasim']['body']['livecmeevents'].length; i++) {
+                if (i != id) {
+                    tempEventArray.push(db['jhasim']['body']['livecmeevents'][i]);
+                }
+            }
+            db['jhasim']['body']['livecmeevents'] = tempEventArray;
+            localStorage.setItem('tempDb', JSON.stringify(db));
+            db = JSON.parse(localStorage.getItem('tempDb'));
+            maskClick();
+            openLiveItems();
+        }
+        if(area == 'enduring'){
+            for (var i = 0; i < db['jhasim']['body']['cmeenduringmaterials'].length; i++) {
+                if (i != id) {
+                    tempEventArray.push(db['jhasim']['body']['cmeenduringmaterials'][i]);
+                }
+            }
+            db['jhasim']['body']['cmeenduringmaterials'] = tempEventArray;
+            localStorage.setItem('tempDb', JSON.stringify(db));
+            db = JSON.parse(localStorage.getItem('tempDb'));
+            maskClick();
+            openEnduringItems();
+        }
+        
+    }
     var table = document.createElement('TABLE');
     table.id = 'table' + index;
     table.style = 'margin:auto; width:100%;'
@@ -100,6 +132,18 @@ var createModule = function (index) {
     trSecondary.appendChild(tdSecondaryLabel);
     trSecondary.appendChild(tdSecondaryURI);
 
+    // Delete button
+    var tdDelete = document.createElement('TD');
+    var deleteBtn = document.createElement('BUTTON');
+    deleteBtn.setAttribute('type', 'button');
+    deleteBtn.innerHTML = 'remove';
+    deleteBtn.id = "deleteBtn" + index;
+    tdDelete.setAttribute('colspan', '2');
+    tdDelete.style.textAlign = 'right';
+    tdDelete.addEventListener('click', deleteClick);
+    tdDelete.appendChild(deleteBtn);
+    var trDelete = document.createElement('TR');
+    trDelete.appendChild(tdDelete);
 
     ////
     ////
@@ -115,8 +159,9 @@ var createModule = function (index) {
     table.appendChild(tr);
     table.appendChild(trSecondary);
     table.appendChild(trHREF);
-    
+    table.appendChild(trDelete);
     table.appendChild(trHR);
 
     document.getElementById('scrollContainer').appendChild(table);
+
 }
