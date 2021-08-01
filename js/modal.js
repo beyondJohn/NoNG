@@ -238,7 +238,7 @@ var enableModal = function () {
     if (document.getElementById('scrollContainer') == null) {
         var scrollContainer = document.createElement('DIV');
         scrollContainer.id = 'scrollContainer';
-        scrollContainer.setAttribute('style', 'overflow-y:scroll; overflow-x:hidden; position:relative;height:100%;');
+        scrollContainer.setAttribute('style', 'overflow-y:scroll; overflow-x:hidden; position:relative;height:100%;padding: 50px 50px 25px 25px;');
         document.getElementById('divModal').appendChild(scrollContainer);
     }
 

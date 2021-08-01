@@ -6,7 +6,7 @@ var maskClick = function (event) {
     if (displayMask) {
         console.log('enabled1');
         document.getElementById('divMask').style.display = "block";
-        document.getElementById('divMask').style.opacity = ".4";
+        document.getElementById('divMask').style.opacity = ".9";
     }
     else {
         console.log('enabled2');
