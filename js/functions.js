@@ -9,8 +9,8 @@ var makeMenuItems = function (data) { // data:JSON dependency injecti
     // 
     // localStorage.setItem('db', data);
     // localStorage.setItem('tempDb', data);
-    localStorage.setItem('db', tempHardCodedData);
-    localStorage.setItem('tempDb', tempHardCodedData);
+    localStorage.setItem('db', JSON.stringify(tempHardCodedData));
+    localStorage.setItem('tempDb', JSON.stringify(tempHardCodedData));
 
 
     var tempData = JSON.parse(localStorage.getItem('tempDb'));
