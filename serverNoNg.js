@@ -11,7 +11,7 @@ const options = {
   ca: fs.readFileSync('/etc/letsencrypt/live/switchmagic.com/chain.pem')
 };
 const corsOptions = {
-  origin: ['https://switchmagic.com:5554', 'https://switchmagic.com:4113'],
+  origin: ['https://switchmagic.com:4999'],
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 app.use(cors(corsOptions));
@@ -19,11 +19,11 @@ app.use('/', express.static('.'));// you can access image using this url: http:/
 // app.use('/images', express.static('./uploads/'));// you can access image using this url: http://localhost:7000/images/abc.jpg
 
 //
-const port = process.env.PORT || '4113';
+const port = process.env.PORT || '4999';
 app.set('port', port);
 
 //http.createServer(app).listen(80);
-https.createServer(options, app).listen(4113);
+https.createServer(options, app).listen(4999);
 //
 
 

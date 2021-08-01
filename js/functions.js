@@ -22,11 +22,11 @@ var makeMenuItems = function (data) { // data:JSON dependency injecti
     liveItems();
     enduringItems();
 }
-makeMenuItems();
-// function getData() {
-//     httpRequest("Get", config['apiUrl'] + "jhasim", "application/json", '', makeMenuItems);
-// }
-// getData();
+
+function getData() {
+    makeMenuItems();//httpRequest("Get", config['apiUrl'] + "jhasim", "application/json", '', makeMenuItems);
+}
+getData();
 
 var tempHardCodedData = {
     "jhasim": {
