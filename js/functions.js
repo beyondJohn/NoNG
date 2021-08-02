@@ -219,10 +219,6 @@ var tempHardCodedData = {
   }
 }
 
-function click() {
-  console.log('clicked');
-  alert("clicked");
-}
 var makeMenuItems = function (data) { // data:JSON dependency injecti
 
   // 
