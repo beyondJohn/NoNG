@@ -51,8 +51,6 @@ function createLinkObj(index) {
     tr.appendChild(tdText);
     tr.appendChild(tdURI);
 
-
-
     formContainer.appendChild(table);
 
     var trHREF = document.createElement('TR');
@@ -100,59 +98,15 @@ function createLinkObj(index) {
     table.appendChild(trHREF);
     table.appendChild(trDelete);
     table.appendChild(trHR);
-    // formContainer.appendChild(labelTitle);
-    // formContainer.appendChild(textTitle);
-    // formContainer.appendChild(document.createElement("BR"));
-    // formContainer.appendChild(labelHref);
-    // formContainer.appendChild(textHref);
-    // formContainer.appendChild(document.createElement("BR"));
 
     document.getElementById('scrollContainer').appendChild(formContainer);
-    //divModal.appendChild(formContainer);
-    // //
 }
 var displayModal = false;
 var modalClick = function () {
-
-    //document.getElementById('divModal').innerHTML = '';
     console.log(db);
     displayModal = !displayModal;
     displayModal ? document.getElementById('divModalContainer').style.top = "10%"
         : document.getElementById('divModalContainer').style.top = "-150%";
-    //var index = activeIndex;
-    if (isInit) {
-        isInit = false;
-
-        btnType = "Edit";
-        if (btnType === "Edit") {
-            // var scrollContainer = document.createElement('DIV');
-            // scrollContainer.id = 'scrollContainer';
-            // scrollContainer.setAttribute('style', 'overflow-y:scroll; overflow-x:hidden; position:relative;height:100%;');
-            // document.getElementById('divModal').appendChild(scrollContainer);
-            // for (var i = 0; i < db['jhasim']['header']['headerlinks'].length; i++) {
-            //     createLinkObj(i);
-            //     document.getElementById("textTitle" + i).value = db['jhasim']['header']['headerlinks'][i]['text'];
-            //     document.getElementById("textHref" + i).value = db['jhasim']['header']['headerlinks'][i]['uri'];
-            // };
-
-
-        }
-        else if (btnType === "Save") {
-            console.log("Save");
-        }
-        else if (btnType === "New") {
-
-            // document.getElementById("textTitle").value = "";
-            // document.getElementById("textHref").value = "";
-            // document.getElementById("textDescription").value = "";
-            // document.getElementById("textCredits").value = "";
-            // document.getElementById("textFaculty").value = "";
-            // document.getElementById("textExpiration").value = "";
-            // document.getElementById("selectPosition").value = "";
-            // document.getElementById("selectPosition").value = "1";
-            // document.getElementById("active").checked = true;
-        }
-    }
 
 }
 var enableModal = function () {
@@ -243,9 +197,3 @@ var enableModal = function () {
     }
 
 };
-
-// function addFooter() {
-
-// }
-
-// function createModalContainer() { }
