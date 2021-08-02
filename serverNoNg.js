@@ -1,5 +1,5 @@
-var express         = require('express');
-var app             = express();
+var express = require('express');
+var app = express();
 const cors = require('cors');
 
 const https = require('https');
@@ -15,7 +15,7 @@ const corsOptions = {
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 app.use(cors(corsOptions));
-app.use('/', express.static('.'));// you can access image using this url: http://localhost:7000/images/abc.jpg
+app.use('/', express.static('.'));// you can access image using this url: https://switchmagic.com:4999/editTemplate.html
 // app.use('/images', express.static('./uploads/'));// you can access image using this url: http://localhost:7000/images/abc.jpg
 
 //
@@ -25,6 +25,3 @@ app.set('port', port);
 //http.createServer(app).listen(80);
 https.createServer(options, app).listen(4999);
 //
-
-
-//app.listen(4113);
